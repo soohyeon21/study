@@ -4,7 +4,6 @@
 a = int(input())
 if ((int(a / 10) == 9) or ((a / 10) == 10)):
     print('A')
-    print(a/10)
 elif (int(a / 10) == 8):
     print('B')
 elif (int(a / 10) == 7):
