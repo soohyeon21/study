@@ -5,6 +5,7 @@
 local repository에서 변경하고 그걸 강제로 github에 push 하기
 or
 github에서 파일별로 일일이 경로 변경하고 그걸 pull/fetch/merge 하기
+(대신 commit message는 하나로 통일되는 듯...?)
 
 
 # github 저장소 이름 및 url 변경하기
