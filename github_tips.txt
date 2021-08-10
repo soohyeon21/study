@@ -11,3 +11,9 @@ github에서 파일별로 일일이 경로 변경하고 그걸 pull/fetch/merge 
 # github 저장소 이름 및 url 변경하기
 git remote -v : 현재 프로젝트 저장소 및 url 출력
 git remote set-url (저장소 및 url) : 저장소 url 변경 가능
+
+# 폴더 밑에 저장되어 있는 파일을 add, commit, push하는 경우
+git add 폴더명1/폴더명2/.../파일명
+git commit -m "commit message"
+git push
+# 그냥 '/'로 폴더명을 추가하면 된다.
