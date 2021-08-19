@@ -2,7 +2,7 @@
 
 # print(list.sort())의 결과는 None이다.
 # sort()는 원본 변경.
-# sort 대신 min() 사용 가능.
+# sort 대신 min() 사용 가능. 10ms 정도 save.
 
 import math
 
