@@ -17,3 +17,10 @@ git add 폴더명1/폴더명2/.../파일명
 git commit -m "commit message"
 git push
 # 그냥 '/'로 폴더명을 추가하면 된다.
+
+# 방금 staging area에서 repository로 commit한 것을 취소(되돌릴 경우)
+# ex) commit message를 잘못 작성했는 등의 이유로.
+git reset --soft HEAD^
+# 느낌표 2개(!!)를 commit message 안에 함부로 쓰면 안될 듯 하다.
+# 느낌표 사용하고 싶다면, 큰 따옴표 말고 작은 따옴표를 쓰거나,
+# set +H 같은 별도의 명령어를 입력해줘야함. 정확하지 않으므로 추가 검색 필요!!
