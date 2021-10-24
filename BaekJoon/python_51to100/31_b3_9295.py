@@ -1,0 +1,9 @@
+# 9295
+
+import sys
+
+t = int(sys.stdin.readline())
+
+for seq in range(1, t+1):
+    a, b = map(int, sys.stdin.readline().split())
+    print("Case {}: {}" .format(seq, a+b))
