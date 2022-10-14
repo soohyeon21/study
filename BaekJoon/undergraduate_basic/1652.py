@@ -1,27 +1,32 @@
 # 1652
 
+# 까비... 처음에 frcnt랑 rcnt랑 헷갈려서 잘못 생각했었다.
+
 import sys
 
 n = int(sys.stdin.readline())
-board = [list(sys.stdin.readline().rstrip()) for _ in range(n)]
+room = [sys.stdin.readline().rstrip() for x in range(n)]
 
-ans = [0,0]
+frcnt, fccnt = 0, 0 # 최종 가로, 최종 세로
+
 for i in range(n):
-    leng_r,leng_c = 0,0
+    rcnt, ccnt = 0, 0 # temp 가로, temp 세로
     for j in range(n):
-        # 가로
-        if board[i][j] == '.':
-            leng_r+=1
-        else:
-            leng_r=0
-        if leng_r==2:
-            ans[0] += 1
-        
-        # 세로
-        if board[j][i] == '.':
-            leng_c+=1
-        else:
-            leng_c=0
-        if leng_c==2:
-            ans[1] += 1
-print(*ans)
+        if (room[i][j] == '.'):
+            rcnt += 1
+        elif (room[i][j] == 'X'):
+            if (rcnt >= 2):
+                frcnt += 1
+            rcnt = 0
+        if (room[j][i] == '.'):
+            ccnt += 1
+        elif (room[j][i] == 'X'):
+            if (ccnt >= 2):
+                fccnt += 1
+            ccnt = 0
+    if (rcnt >= 2):
+        frcnt += 1
+    if (ccnt >= 2):
+        fccnt += 1
+
+print(frcnt, fccnt)
