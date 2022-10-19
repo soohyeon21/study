@@ -3,11 +3,11 @@
 import sys
 
 n = int(sys.stdin.readline())
-num = list(map(int, sys.stdin.readline().split()))
-ans = []
+line = list(map(int, sys.stdin.readline().split()))
+eat = []
 
 for i in range(n):
-    ans.insert(i-num[i], i+1)
+    eat.insert(line[i], i+1)
 
-for k in ans:
-    print(k, end=' ')
+eat = eat[::-1]
+print(*eat)
