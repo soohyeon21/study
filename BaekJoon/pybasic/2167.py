@@ -1,24 +1,29 @@
 # 2167
 
+# dp. Dynamic Programming. 동적 프로그래밍. 다이나믹 프로그래밍
+# 메모이제이션. Memoization
+
 #
 # sol
 #
 import sys
 
 n, m = map(int, sys.stdin.readline().split())
-lst = []
-dp = [[0 for x in range(m+1)] for y in range(n+1)]
+arr = []
 for _ in range(n):
-    lst.append(list(map(int, sys.stdin.readline().split())))
+    arr.append(list(map(int, sys.stdin.readline().split())))
 
+# dp 만들기
+dp = [[0 for x in range(m+1)] for y in range(n+1)]
 for row in range(1, n+1):
     for col in range(1, m+1):
-        dp[row][col] = lst[row-1][col-1] + dp[row][col-1] + dp[row-1][col] - dp[row-1][col-1]
+        dp[row][col] = arr[row-1][col-1] + dp[row][col-1] + dp[row-1][col] - dp[row-1][col-1]
 
 k = int(sys.stdin.readline())
 for _ in range(k):
     i, j, x, y = map(int, sys.stdin.readline().split())
-    print(dp[x][y] - dp[x][j-1] - dp[i-1][y] + dp[i-1][j-1])
+    total = dp[x][y] - dp[x][j-1] - dp[i-1][y] + dp[i-1][j-1]
+    print(total)
 
 
 #
