@@ -32,4 +32,4 @@ git rm 파일명
 git rm 구파일명
 git add 새파일명
 git commit -m "commit message"
-gt push
+git push
