@@ -1,14 +1,20 @@
 # 3076
 
+# 후훗 xd 생각한건 좀 잘한듯!
+
 import sys
 
 r, c = map(int, sys.stdin.readline().split())
 a, b = map(int, sys.stdin.readline().split())
 
-for i in range(r*a):
-    for j in range(c*b):
-        if (((i%(a*2)) < a) == ((j%(b*2)) < b)):
-            print("X", end="")
-        else:
-            print(".", end="")
-    print("")
+xd = ["X", "."]
+chess = []
+for rr in range(r):
+    line = ""
+    for cc in range(c):
+        line += xd[(rr%2+cc%2)%2]*b
+    for aa in range(a):
+        chess.append(line)
+
+print("\n".join(chess))
+##print(*chess, sep="\n")
