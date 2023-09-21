@@ -2,6 +2,8 @@
 
 # range(n) 조심
 
+# round(num, 어디서) # 음수는 정수부분 반올림, 양수는 소수부분 반올림
+
 import sys
 
 n = int(sys.stdin.readline())
@@ -16,9 +18,6 @@ for _ in range(n):
 
     a = len(ch)
     r = a - ch.count("#")
-##    ra = r/a*100
-##    if ((ra*100)%1 != 0):
-##        ra = round(ra, 1)
     ra = round(r/a*100, 1)
     if (ra == int(ra)):
         ra = int(ra)
