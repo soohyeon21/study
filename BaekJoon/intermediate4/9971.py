@@ -2,6 +2,8 @@
 
 # dictionary나 "ABC...XYZVWX...STU" 문자열 사용하는 방법도 있음.
 
+# (-5)%26 = 21
+
 import sys
 
 while (1):
