@@ -1,27 +1,5 @@
 # 13301
 
-#
-# sol1) 틀림. RecursionError.
-#
-##import sys
-##
-##def periphery(num):
-##    if (tile[num] == 0):
-##        return periphery(num) + periphery(n-2)
-##    return tile[num]
-##
-##n = int(sys.stdin.readline())
-##
-##tile = [0, 1, 1, 2, 3, 5, 8] + [0 for _ in range(75)]
-##peri = periphery(n)*4 + periphery(n-1)*2
-##
-##print(peri)
-
-
-
-#
-# sol2)
-#
 import sys
 
 n = int(sys.stdin.readline())
