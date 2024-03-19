@@ -1,6 +1,7 @@
 # 11576
 
 # or python 진법 변환 module 사용하기?
+# -> python은 int, bin, oct, hex 등만 지원. 이 방법은 안될듯.
 
 #
 # sol1) A진법 -> 10진법 -> B진법
