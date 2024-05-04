@@ -2,17 +2,18 @@
 
 import sys
 
-C, C = [0, 0, 0], [0, 0 0]
+def pour():
+    for i in range(1, 101):
+        tmp = min(buck[i%3][0], buck[i%3][1]+buck[(i-1)%3][1])
+        buck[(i-1)%3][1] -= tmp - buck[i%3][1]
+        buck[i%3][1] = tmp
+                
+        pair = tuple(buck[x][1] for x in range(3))
+        states.append(pair)
 
-for x in range(3):
-    a, b = map(int, sys.stdin.readline().split())
-    C[x] = a
-    C[x] = b
+buck = [list(map(int, sys.stdin.readline().split())) for _ in range(3)]
 
-for c in range(100):
-    x, nx = c%3, (c+1)%3
+states = []
+pour()
 
-    M[x], M[nx] = max(M[x]-(C[nx]-M[nx]), 0min(C[nx], M[x] + M[nx])
-
-for m in M:
-    print(m))
+print(*states[-1], sep="\n")
