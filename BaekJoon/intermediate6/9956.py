@@ -28,7 +28,6 @@ while (1):
 
     rst = ""
     word = ""
-    word_only = ""
     cap = [0 for _ in range(len(line))]
     for k in range(len(line)):
         if (line[k].isspace()):
