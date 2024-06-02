@@ -1,26 +1,12 @@
 # 5648
 
-##import sys
-##
-##elements = []
-##first = False
-##while (1):
-##    try:
-##        ipt = sys.stdin.readline().rstrip()
-##    except EOFError:
-##        break
-##
-##        ipt = ipt.split()
-##        if (not first):
-##            n = int(ipt[0])
-##            ipt = ipt[1:]
-##            first = True
-##        for num in ipt:
-##            elements.append(int(num[::-1]))
-##
-##elements.sort()
-##print(*elements, sep="\n")
+# n, *elements # 2번째 값부터는 elements라는 이름의 list에 저장
 
+# "1 2 3\n4 5".split() # ['1', '2', '3', '4', '5']
+
+# read(), readlines() 모두 Ctrl+D로 입력 중단 가능
+# sys.stdin.read() # 개행문자(\n) 포함 단일 문자열 반환 # 'd\nf\nd\ns\n'
+# sys.stdin.readlines() # 개행문자(\n) 포함 list 반환 # ['3\n', '4\n', '5\n', '6\n', '\n']
 
 import sys
 
