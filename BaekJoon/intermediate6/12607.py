@@ -14,7 +14,6 @@ for idx in range(1, n+1):
     msg = sys.stdin.readline().replace("\n", "")
     rst = str(text[msg[0]])
     for i in range(1, len(msg)):
-        #print(rst, str(text[msg[i]]))
         if (rst[-1] == str(text[msg[i]])[0]):
             rst += " "
         rst += str(text[msg[i]])
