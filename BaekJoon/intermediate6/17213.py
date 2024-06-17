@@ -1,6 +1,6 @@
 # 17213
 
-# math.comb or math.factorial()
+# math.comb() or math.factorial()
 
 import sys
 
