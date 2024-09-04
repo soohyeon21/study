@@ -21,6 +21,7 @@
 
 #
 # sol2) 정답
+# stops를 sort하고 시작하면 for문을 2번 돌릴 필요가 없고, 시간도 단축된다.
 #
 import sys
 
