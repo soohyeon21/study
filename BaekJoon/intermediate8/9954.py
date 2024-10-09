@@ -13,7 +13,12 @@ while (1):
     rst = ""
     for letter in line:
         if (letter.isalpha()):
-            rst += chr(65+((ord(letter)-(ord(fin)-65)+26)%26))
+            subn = ord(fin)-65
+            ul = [97, 65][int(letter.isupper())]
+            after = ord(letter) - ul - subn
+            after = (after + 26)%26 + ul
+            rst += chr(after)
         else:
             rst += letter
+            
     print(rst)
