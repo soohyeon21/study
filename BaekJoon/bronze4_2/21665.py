@@ -3,7 +3,7 @@
 # n x m 크기의 흑백 이미지와 반전시킨 흑백 이미지가 주어질때, 잘못 반전된 부분의 개수를 구하라.
 
 # 이런 방법도 가능
-# sum(A[i][j] == B[i][k] for i in range(n) for j in range(m))
+# sum(A[i][j] == B[i][j] for i in range(n) for j in range(m))
 
 import sys
 
