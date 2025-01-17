@@ -10,7 +10,7 @@ n = int(sys.stdin.readline())
 ai = list(map(int, sys.stdin.readline().split()))
 
 possible = []
-for eo in [0, 1]: # 시작 수열의 첫번째가 짝수 or 홀수
+for eo in [0, 1]: # 수열의 첫번째가 짝수 or 홀수
     before = eo
     cnt = 0
     for i in range(n):
