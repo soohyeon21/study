@@ -1,21 +1,17 @@
 # 19947
 
-# 틀림
+# 투자 A,B,C가 섞여서 진행될 수 있다.
 
 import sys
 
 h, y = map(int, sys.stdin.readline().split())
 
-caseA = h
-for ia in range(y//1):
-    caseA = int(caseA*(1+0.05))
+money = [h for _ in range(y+1)]
+rate = {1:0.05, 3:0.2, 5:0.35}
 
-caseB = h
-for ib in range(y//3):
-    caseB = int(caseB*(1+0.20))
+for year in range(1, y+1):
+    for term in [1, 3, 5]:
+        if (0 <= year-term):
+            money[year] = max(money[year], int(money[year-term]*(1+rate[term])))
 
-caseC = h
-for ic in range(y//5):
-    caseC = int(caseC*(1+0.35))
-
-print(max(caseA, caseB, caseC))
+print(money[-1])
