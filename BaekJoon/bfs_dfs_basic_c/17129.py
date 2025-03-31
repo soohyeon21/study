@@ -7,7 +7,7 @@ def BFS(node):
     queue = deque([node])
     visited[node[0]][node[1]] = True
 
-    dist = 0
+    #dist = 0
     while (queue):
         now = queue.popleft()
         pairs = [(1, 0), (-1, 0), (0, 1), (0, -1)]
@@ -16,13 +16,14 @@ def BFS(node):
             nx = now[1] + pair[1]
             if ((0 <= ny < m) and (0 <= nx < n)):
                 if (not visited[ny][nx] and (graph[ny][nx] != '1')):
-                    queue.append((ny, nx))
+                    #distance[ny][nx] = distance[now[0]][now[1]] + 1
+                    #queue.append((ny, nx))
+                    queue.append((ny, nx, now[2]+1))
                     visited[ny][nx] = True
-                    if (graph[ny][nx] in '2345'):
-                        journey.append((graph[ny][nx], dist))
-                        
-        dist += 1
-        
+                    if (graph[ny][nx] in '345'):
+                        #journey.append((graph[ny][nx], distance[ny][nx]))
+                        journey.append((graph[ny][nx], now[2]+1))
+                        return
 
 
 n, m = map(int, sys.stdin.readline().split())
@@ -38,7 +39,8 @@ for i in range(m):
 visited = [[False for i1 in range(n)] for i2 in range(m)]
 
 journey = []
-food = BFS((bird[0], bird[1]))
+#distance = [[0 for i3 in range(n)] for i4 in range(m)]
+food = BFS((bird[0], bird[1], 0))
 
 if (len(journey) == 0):
     print("NIE")
