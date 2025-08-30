@@ -1,5 +1,7 @@
 # 1672
 
+# python 문자열 slicing의 시간복잡도는 O(k). (단, k=slicing한 문자열 길이)
+
 import sys
 
 table = {'AA':'A', 'AG':'C', 'AC':'A', 'AT':'G',
@@ -8,10 +10,10 @@ table = {'AA':'A', 'AG':'C', 'AC':'A', 'AT':'G',
          'TA':'G', 'TG':'A', 'TC':'G', 'TT':'T'}
 
 n = int(sys.stdin.readline())
-dna = sys.stdin.readline().rstrip()
+dna = sys.stdin.readline().rstrip()[::-1]
 
-for i in range(n-1):
-    end = table[dna[-2:]]
-    dna = dna[:-2]+end
+end = dna[0]
+for i in range(1, n):
+    end = table[end+dna[i]]
 
-print(dna)
+print(end)
