@@ -31,6 +31,8 @@
 
 #
 # sol2)
+# 1) 우선 서류 성적으로 sort 하고
+# 2) 면접 성적은 무조건 높아야지 선발될 수 있다.
 #
 import sys
 
@@ -40,8 +42,10 @@ for _ in range(t):
     cand = sorted([tuple(map(int, sys.stdin.readline().split())) for i in range(n)])
 
     cnt = 1
-    for i in range(1, n-1):
-        if (cand[i][1] < cand[0][1]):
+    high = 0
+    for i in range(1, n):
+        if (cand[i][1] < cand[high][1]):
             cnt += 1
+            high = i
 
     print(cnt)
