@@ -21,5 +21,6 @@ for k in range(len(cipher)//len(word)-1):
         print(f"key_ord : {word_ord}")
         print(f"original: {[0, 2, 12, 18, 4, 13, 3, 12, 14, 17, 4, 12, 14, 13, 10]}")
         print(f"cip_ord : {[18, 6, 25, 21, 16, 1, 20, 16, 0, 5, 17, 22, 18, 11, 2]}")
+        print(f"====")
 
 print(msg_ord)
