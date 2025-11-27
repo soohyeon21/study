@@ -1,5 +1,7 @@
 # 1268
 
+# 가장 많은 인원과 같은 반을 해본 사람 말고, 1번이라도 같은 반을 해본 사람이 가장 많은 사람. 아는 사람이 가장 많은 사람.
+
 import sys
 
 n = int(sys.stdin.readline())
@@ -19,4 +21,5 @@ for c in range(5):
                 freq[student].update(set(students))
 
 tmpcp = sorted(list(freq.items()), key=lambda x:(-len(x[1]), x[0]))[0][0]
+
 print(tmpcp)
