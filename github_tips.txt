@@ -28,6 +28,12 @@ git reset --soft HEAD^
 # add한 것을 삭제하고 싶다
 git rm 파일명
 
+## 로컬(내 노트북)이 아닌 온라인 깃헙에서 바로 파일을 commit 했다?
+# ex) 핸드폰으로 깃헙 들어가서 commit
+# 로컬에서 다른 작업 하기 전에 먼저 `git pull`을 해서 sync를 맞춰준 다음에
+# 로컬에서 이어서 파일 만들어서 작업하고 add/commit/push 하면 된다.
+# pull 하기 전에 작업한 다음, pull을 하면 충돌 발생!!
+
 # 파일 명을 바꾸고 나서 git bash를 열었다
 git rm 구파일명
 git add 새파일명
