@@ -1,11 +1,13 @@
 # 9782
 
+# len(arr) == n
+
 import sys
 
 idx = 1
 while (1):
-    arr = list(map(int, sys.stdin.readline.split()))
-    if (arr == [0]):
+    n, *arr = map(int, sys.stdin.readline().split())
+    if (n == 0):
         break
 
     median = 0
@@ -14,5 +16,5 @@ while (1):
     else:
         median = sum(arr[len(arr)//2-1:len(arr)//2+1])/2
 
-    print(f"Case {idx}: {median:.2f}")
+    print(f"Case {idx}: {median:.1f}")
     idx += 1
