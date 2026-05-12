@@ -13,8 +13,10 @@ def solution(nickname):
             answer += "0"
         else:
             answer += letter
-    if len(answer) < 3:
-        answer += "o"*(4-len(answer))
+##    if len(answer) < 3:
+##        answer += "o"*(4-len(answer)) # wrong!
+    for i in range(4-len(answer)):
+        answer += "o"
     if len(answer) > 8:
         answer = answer[:8]
     return answer
