@@ -1,5 +1,5 @@
 # 120911
-#
+# 문자열 정렬하기 (2)
 
 def solution(my_string):
     answer = []
@@ -9,6 +9,6 @@ def solution(my_string):
     
     anss = []
     for k in range(len(answer)):
-        anss.append()
-    jans = ''.join(answer)
-    return answer
+        anss.append(chr(answer[k]))
+    jans = ''.join(anss)
+    return jans
