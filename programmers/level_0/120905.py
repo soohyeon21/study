@@ -1,0 +1,9 @@
+# 120905
+# n의 배수 고르기
+
+def solution(n, numlist):
+    answer = []
+    for i in range(len(numlist)):
+        if (numlist[i]%n == 0):
+            answer.append(numlist[i])
+    return answer
